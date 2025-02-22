@@ -1,0 +1,268 @@
+https://www.geeksforgeeks.org/abstraction-in-java-2/?ref=lbp
+
+Abstraction in Java
+Last Updated : 10 Jan, 2025
+Abstraction in Java is the process of hiding the implementation details and only showing the essential
+ functionality or features to the user. This helps simplify the system by focusing on what an object does
+  rather than how it does it. The unnecessary details or complexities are not displayed to the user.
+
+Television remote control is an excellent example of abstraction. It simplifies the interaction
+ with a TV by hiding the complexity behind simple buttons and symbols, making it easy without needing to
+ understand the technical details of how the TV functions.
+
+Example:
+
+// Demonstrating Abstraction in Java
+abstract class Geeks {
+    abstract void turnOn();
+    abstract void turnOff();
+}
+
+// Concrete class implementing the abstract methods
+
+class TVRemote extends Geeks {
+
+                      @Override
+    void turnOn() {
+
+                                                          System.out.println("TV is turned ON.");
+
+    }
+
+    @Override
+
+                     void turnOff() {
+
+        System.out.println("TV is turned OFF.");
+
+    }
+}
+
+// Main class to demonstrate abstraction
+public class Main {
+    public static void main(String[] args) {
+        Geeks remote = new TVRemote();
+        remote.turnOn();
+        remote.turnOff();
+    }
+}
+
+Output
+TV is turned ON.
+TV is turned OFF.
+Explanation: In the above example, the “Geeks” abstract class hides implementation details
+and defines the essential methods turnOn and turnOff. The TVRemote class provides specific
+implementations for these methods. The main class demonstrates how the user interacts with
+the abstraction without needing to know the internal details.
+
+In Java, abstraction is achieved by interfaces and abstract classes. We can achieve 100% abstraction
+ using interfaces. Data Abstraction may also be defined as the process of identifying
+ only the required characteristics of an object ignoring the irrelevant details. The properties
+ and behaviors of an object differentiate it from other objects of similar type and also help in
+ classifying/grouping the objects.
+
+Abstraction Real-Life Example:
+Consider a real-life example of a man driving a car. The man only knows that pressing the accelerator
+will increase the speed of a car or applying brakes will stop the car, but he does not know how on pressing
+ the accelerator the speed is actually increasing, he does not know about the inner mechanism of the car or
+  the implementation of the accelerator, brakes, etc. in the car. This is what abstraction is.
+
+
+Abstract Classes and Abstract Methods
+An abstract class is a class that is declared with an abstract keyword.
+An abstract method is a method that is declared without implementation.
+An abstract class may or may not have all abstract methods. Some of them can be concrete methods
+A abstract method must always be redefined in the subclass, thus making overriding compulsory or making the subclass itself abstract.
+Any class that contains one or more abstract methods must also be declared with an abstract keyword.
+There can be no object of an abstract class. That is, an abstract class can not be directly instantiated with the new operator.
+An abstract class can have parameterized constructors and the default constructor is always present in an abstract class.
+Algorithm to Implement Abstraction
+Determine the classes or interfaces that will be part of the abstraction.
+Create an abstract class or interface that defines the common behaviors and properties of these classes.
+Define abstract methods within the abstract class or interface that do not have any implementation details.
+Implement concrete classes that extend the abstract class or implement the interface.
+Override the abstract methods in the concrete classes to provide their specific implementations.
+Use the concrete classes to contain the program logic.
+When to Use Abstract Classes and Abstract Methods?
+There are situations in which we will want to define a superclass that declares the structure of a given abstraction without providing a complete implementation of every method. Sometimes we will want to create a superclass that only defines a generalization form that will be shared by all of its subclasses, leaving it to each subclass to fill in the details.
+
+Consider a classic “shape” example, perhaps used in a computer-aided design system or game simulation. The base type is “shape” and each shape has a color, size, and so on. From this, specific types of shapes are derived(inherited)-circle, square, triangle, and so on — each of which may have additional characteristics and behaviors. For example, certain shapes can be flipped. Some behaviors may be different, such as when you want to calculate the area of a shape. The type hierarchy embodies both the similarities and differences between the shapes.
+
+Abstract Class in Java
+
+Example 1:
+// Java program to illustrate the
+// concept of Abstraction
+abstract class Shape {
+    String color;
+    // these are abstract methods
+
+    abstract double area();
+    public abstract String toString();
+    // abstract class can have the constructor
+
+    public Shape(String color)
+
+    {
+        System.out.println("Shape constructor called");
+        this.color = color;
+    }
+    // this is a concrete method
+    public String getColor() { return color; }
+}
+
+class Circle extends Shape {
+    double radius;
+
+    public Circle(String color, double radius)
+
+    {
+
+        // calling Shape constructor
+
+        super(color);
+        System.out.println("Circle constructor called");
+        this.radius = radius;
+    }
+    @Override double area()
+    {
+        return Math.PI * Math.pow(radius, 2);
+    }
+    @Override public String toString()
+    {
+        return "Circle color is " + super.getColor()
+            + "and area is : " + area();
+    }
+}
+class Rectangle extends Shape {
+
+    double length;
+
+    double width;
+
+    public Rectangle(String color, double length,
+                     double width)
+
+    {
+        // calling Shape constructor
+        super(color);
+        System.out.println("Rectangle constructor called");
+        this.length = length;
+        this.width = width;
+    }
+    @Override double area() { return length * width; }
+
+    @Override public String toString()
+    {
+
+        return "Rectangle color is " + super.getColor()
+            + "and area is : " + area();
+    }
+}
+
+public class Test {
+
+    public static void main(String[] args)
+
+    {
+        Shape s1 = new Circle("Red", 2.2);
+        Shape s2 = new Rectangle("Yellow", 2, 4);
+
+        System.out.println(s1.toString());
+
+        System.out.println(s2.toString());
+    }
+}
+
+Output
+Shape constructor called
+Circle constructor called
+Shape constructor called
+Rectangle constructor called
+Circle color is Redand area is : 15.205308443374602
+Rectangle color is Yellowand area is : 8.0
+Example 2: Let’s see another example to understand abstraction in Java.
+
+
+
+// Abstract Class declared
+abstract class Animal {
+    private String name;
+
+    public Animal(String name) {
+
+     this.name = name;
+
+    }
+
+    public abstract void makeSound();
+
+    public String getName() {
+      return name;
+    }
+}
+
+// Abstracted class
+class Dog extends Animal {
+
+    public Dog(String name) {
+
+      super(name);
+    }
+
+    public void makeSound()
+
+    {
+        System.out.println(getName() + " barks");
+    }
+}
+// Abstracted class
+
+class Cat extends Animal {
+
+    public Cat(String name) {
+
+      super(name);
+
+    }
+
+    public void makeSound()
+
+    {
+
+        System.out.println(getName() + " meows");
+
+    }
+
+}
+
+// Driver Class
+
+public class Geeks {
+
+
+    // Main Function
+
+    public static void main(String[] args)
+
+    {
+
+        Animal myDog = new Dog("ABC");
+
+        Animal myCat = new Cat("XYZ");
+
+        myDog.makeSound();
+
+        myCat.makeSound();
+
+    }
+
+}
+
+Output
+ABC barks
+XYZ meows
+Interface
+Interfaces are another method of implementing abstraction in Java. The key difference is that, by using interfaces, we can achieve 100% abstraction in Java classes. In Java or any other language, interfaces include both methods and variables but lack a method body. Apart from abstraction, interfaces can also be used to implement inheritance in Java.
+
+Implementation: To implement an interface we use the keyword “implements” with class.

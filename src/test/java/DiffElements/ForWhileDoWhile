@@ -1,0 +1,3 @@
+While       When the number of iterations are unknown
+For         Number of iterations are known.
+Do while    Will execute atleast once irrespetive of the condition.
