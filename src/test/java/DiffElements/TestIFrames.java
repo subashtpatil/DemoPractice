@@ -35,7 +35,7 @@ public class TestIFrames {
 
 	public static void main(String[] args) throws IOException {
 
-		WebDriverManager.chromedriver().setup();
+		//WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.get("https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_submit_get");
 		driver.manage().window().maximize();
@@ -43,24 +43,17 @@ public class TestIFrames {
 
 		/*Set<String> winids = driver.getWindowHandles();
 		Iterator<String> iterate = winids.iterator();
-
-		String first_window = iterate.next();
-		*/
+		String first_window = iterate.next();		*/
 		
 		driver.switchTo().frame("iframeResult");
 		//driver.findElement(By.xpath("/html/body/button")).click();
 		
-		
 		//((JavascriptExecutor) driver).executeScript("myFunction()");
-		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("myFunction()");
 		
 		js.executeScript("arguments[0].style.border='3px solid red'", driver.findElement(By.id("mySubmit")));
-		
-		
-		
-		
+
 		//driver.switchTo().window(first_window);
 		driver.switchTo().defaultContent();
 		
@@ -71,12 +64,9 @@ public class TestIFrames {
 		for (WebElement frame : frames) {
 
 			System.out.println(frame.getAttribute("id"));
+			System.out.println(frame.getAttribute("url"));
 		}
 		
-		
 		captureScreenshot();
-		
-		
 	}
-
 }

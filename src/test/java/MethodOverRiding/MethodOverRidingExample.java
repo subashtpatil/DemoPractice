@@ -10,6 +10,10 @@ class MotorBike extends Vehicle{
     public void move(){
         System.out.println("MotorBike can move and accelerate too!!");
     }}
+
+
+
+
 class MethodOverRidingExample {
     public static void main(String[] args) {
 //parent class reference holds the child class object
@@ -18,4 +22,5 @@ class MethodOverRidingExample {
         vh = new Vehicle();
         vh.move();    // prints Vehicles can move!!    }
     }
-}
+}          /* MotorBike can move and accelerate too!!
+Vehicles can move!!*/

@@ -12,13 +12,11 @@ public class ReverseWordsInString {
     {
         // word variable to store word
         String word;
-
         // making a string stream
-        StringTokenizer iss = new StringTokenizer(str);
-
+        StringTokenizer tok = new StringTokenizer(str);
         // Read and print each word.
-        while (iss.hasMoreTokens()) {
-            word = iss.nextToken();
+        while (tok.hasMoreTokens()) {
+            word = tok.nextToken();
             System.out.print(
                     new StringBuilder(word).reverse().toString()
                             + " ");
@@ -32,6 +30,4 @@ public class ReverseWordsInString {
         printWords(s);
     }
 }
-
-// Contributed by rishabmalhdijo
 

@@ -11,12 +11,7 @@ public class TestBrowsers {
 	
 	public static String browser = "chrome"; //excel sheet
 	public static WebDriver driver;
-	
-
 	public static void main(String[] args) {
-
-		
-		
 		if(browser.equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
@@ -29,7 +24,6 @@ public class TestBrowsers {
 			WebDriverManager.iedriver().setup();
 			driver = new InternetExplorerDriver();
 		}
-
 		
 		driver.get("http://way2automation.com");
 		
@@ -39,7 +33,5 @@ public class TestBrowsers {
 		
 		//driver.close(); //current browser window
 		driver.quit(); //current browser window + all related browser in the same session
-		
 	}
-
 }

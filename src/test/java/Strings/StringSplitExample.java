@@ -13,11 +13,10 @@ public class StringSplitExample {
                 //Example
             }
 
-
             System.out.println("Split with limit , will split the string based on the limit we specify");
             //Split with limit -
             //it will split the string based on the limit we specify
-            String[] str2 = s.split(" ", 3);
+            String[] str2 = s.split(" ", 2);
             for (int i = 0; i < str2.length; i++) {
                 System.out.println(str2[i]); // output
                 // Java

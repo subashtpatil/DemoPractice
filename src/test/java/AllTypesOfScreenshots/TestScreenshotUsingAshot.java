@@ -1,4 +1,4 @@
-package DiffElements;
+package AllTypesOfScreenshots;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,7 +11,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
@@ -21,7 +20,7 @@ public class TestScreenshotUsingAshot {
 	public static void main(String[] args) throws IOException {
 
 
-		WebDriverManager.firefoxdriver().setup();
+		//WebDriverManager.firefoxdriver().setup();
 		WebDriver driver = new FirefoxDriver();
 		driver.get("http://www.way2automation.com/");
 		driver.manage().window().maximize();

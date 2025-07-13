@@ -12,7 +12,7 @@ import java.time.Duration;
 public class TestAlerts_Actions_MoveToElement {
 
     public static void main(String[] args) throws InterruptedException {
-       WebDriverManager.chromedriver().setup();
+        //WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("http://www.tizag.com/javascriptT/javascriptalert.php");
         driver.manage().window().maximize();
@@ -29,7 +29,7 @@ public class TestAlerts_Actions_MoveToElement {
 
 //HANDLING A normal alert which is as below
 
-       /* WebDriverManager.chromedriver().setup();
+      /*  WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://americangolf.co.uk/");
@@ -49,7 +49,8 @@ public class TestAlerts_Actions_MoveToElement {
         Thread.sleep(3000);
        // HANDLING MOUSE HOVER and clicking on Driver link
         WebElement Element2 = driver.findElement(By.xpath("(//*[contains(text(),'Drivers')])[4]"));
-        Element2.click();*/
+        Element2.click();
+    }*/
     }
+}
 
-    }

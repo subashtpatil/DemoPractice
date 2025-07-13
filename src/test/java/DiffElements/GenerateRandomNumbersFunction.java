@@ -13,12 +13,9 @@ public class GenerateRandomNumbersFunction {
 
     public static void GenerateRandomNumbers(int n){
         double d = Math.random()*n;
-
-    int num = (int)d;           //this foribly converts d which is double to integer
-       System.out.println(d);
-
+        int num = (int)d;           //this foribly converts d which is double to integer
+        System.out.println(d);
         System.out.println(num);
-
     }
 }
 

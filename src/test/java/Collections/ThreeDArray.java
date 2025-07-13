@@ -3,8 +3,6 @@ package Collections;
 public class ThreeDArray {
 
 	public static void main(String[] args) {
-
-
 		int[][][] array = new int[2][3][4];
 		
 		
@@ -21,11 +19,6 @@ public class ThreeDArray {
 				System.out.println();
 			}
 			System.out.println();
-			
 		}
-		
-		
-
 	}
-
 }

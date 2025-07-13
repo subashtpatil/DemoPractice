@@ -10,17 +10,12 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 public class SwitchToParentFrame {
-
-
     public static void main(String[] args) {
-
-
             WebDriverManager.chromedriver().setup();
             WebDriver driver = new ChromeDriver();
             driver.get("https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_frames2");
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
 
             System.out.println(driver.findElements(By.tagName("iframe")).size());
 
@@ -36,11 +31,6 @@ public class SwitchToParentFrame {
             //driver.switchTo().frame("iframeResult");
             driver.switchTo().parentFrame();
             driver.findElement(By.xpath("/html/body/button")).click();
-
             System.out.println(driver.findElements(By.tagName("iframe")).size());
-
-
-
         }
-
     }

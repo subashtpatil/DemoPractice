@@ -14,12 +14,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class TestSliders {
 
 	public static void main(String[] args) {
-
-
-		/*WebDriverManager.firefoxdriver().setup();
-		WebDriver driver = new FirefoxDriver();*/
-
-		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://jqueryui.com/resources/demos/slider/default.html");
 		driver.manage().window().maximize();
@@ -30,9 +24,5 @@ public class TestSliders {
 													  //will slide horizontally full screen to the end if given as width only
 		WebElement sliderButton = driver.findElement(By.xpath("//*[@id=\"slider\"]/span"));
 		new Actions(driver).dragAndDropBy(sliderButton, width, 0).perform();
-		
-		
-
 	}
-
 }

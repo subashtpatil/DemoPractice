@@ -17,26 +17,18 @@ public class TestIsElementPresent {
 		driver.findElement(By.xpath(locator));
 		return true;
 		}catch(Throwable t) {
-			
 			return false;
 		}*/
 		
 		int size = driver.findElements(by).size();
 		if(size==0) {
-			
 			return false;
 		}else {
-			
 			return true;
 		}
 	}
-	
-	
 
 	public static void main(String[] args) {
-
-
-
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.get("https://www.wikipedia.org/");

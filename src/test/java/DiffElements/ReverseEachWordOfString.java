@@ -13,16 +13,12 @@ public class ReverseEachWordOfString {
 
         for (int i = words.length-1 ; i>=0; i--) {
             strWords.add(words[i]);
-
-       /* String reverseWord = "";
-
-        for (int j = word.length()-1; j >= 0; j--)
+        }
+      /*  for(String word: words)
         {
-            reverseWord = reverseWord + word.charAt(j);
-        }
+            strWords.add(word);
 
-        reverseString = reverseString + reverseWord + " ";*/
-        }
+        }*/
         System.out.println(strWords);
     }
 }

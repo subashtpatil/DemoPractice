@@ -20,12 +20,12 @@ public class DataProviders {
     }else if (m.getName().equals("testUserReg")){
 
              data = new Object[2][3];
-            data[0][0]= "raman";
-            data[0][1]= "ahuja";
+            data[0][0]= "Stp";
+            data[0][1]= "Pats";
             data[0][2]= "stp@gmail.com";
 
-            data[1][0]= "Rahul";
-            data[1][1]= "Arora";
+            data[1][0]= "SSP";
+            data[1][1]= "Pats";
             data[1][2]=  "papu@gmail.com";
 }
 return  data;
