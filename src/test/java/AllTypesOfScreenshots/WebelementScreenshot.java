@@ -1,4 +1,4 @@
-package DiffElements;
+package AllTypesOfScreenshots;
 
 
 

@@ -6,18 +6,15 @@ which can hold all types of data in a single array.*/
 public class ObjectArray {
 
     public static void main(String[] args) {
-        Object ar[]= new Object[5];
-        ar[0]="Hello";
-        ar[1]= 10293;
-        ar[2]= "333";
-        ar[3]= true;
-        ar[4]= 33.333;
+        Object[] arr= new Object[5];
+        arr[0]="Hello";
+        arr[1]= 10293;
+        arr[2]= "333";
+        arr[3]= true;
+        arr[4]= 33.333;
 
-
-
-        System.out.println(ar.toString());
-        System.out.println(String.valueOf(ar));
-        System.out.println(ar[0]);
+        System.out.println(arr.toString());
+        System.out.println(String.valueOf(arr));
+        System.out.println(arr[0]);
     }
-
 }

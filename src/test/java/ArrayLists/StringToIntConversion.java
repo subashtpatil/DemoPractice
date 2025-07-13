@@ -6,13 +6,12 @@ public class StringToIntConversion {
 public static void main(String[] args)
 {
     String s = "12345";
+    //String s = "subhas";
 
     // Convert the string to an integer  using Integer.parseInt()
     int n = Integer.parseInt(s);
 
     System.out.println("Converted String to int : " + n);
-
-
     //2ND METHOD
     // Convert String to Integer using valueOf()
     String t = "217";
@@ -28,12 +27,9 @@ public static void main(String[] args)
     String str =String.valueOf(number);
     System.out.println("CONVERT INTEGER TO STRING : " + str);
 
-
     // CONVERT INTEGER TO STRING 2nd method
-
     int number2= 1111;
     String str2 =Integer.toString(number2);
     System.out.println("CONVERT INTEGER TO STRING 2nd method  : " + str2);
-
 }
 }

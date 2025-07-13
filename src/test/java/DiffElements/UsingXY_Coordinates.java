@@ -8,13 +8,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 import java.util.concurrent.TimeUnit;
-
+import org.openqa.selenium.manager.SeleniumManager;
 public class UsingXY_Coordinates {
 
     public static void main(String[] args) {
-
-
-        WebDriverManager.chromedriver().setup();
+       // WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("http://google.com");
         driver.manage().window().maximize();
@@ -27,6 +25,4 @@ public class UsingXY_Coordinates {
         Actions actions = new Actions(driver);
         actions.moveByOffset(x,y).click().perform();
         driver.quit();
-
-    }
-}
+    }}

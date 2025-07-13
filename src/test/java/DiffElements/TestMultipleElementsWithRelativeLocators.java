@@ -14,16 +14,14 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class TestMultipleElementsWithRelativeLocators {
 
         public static void main(String[] args) {
-            WebDriverManager.chromedriver().setup();
+            //WebDriverManager.chromedriver().setup();
             WebDriver driver = new ChromeDriver();
             driver.get("https://www.way2automation.com/way2auto_jquery/index.php");
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
             List<WebElement> labels = driver.findElements(with(By.tagName("label")).below(By.xpath("//*[@id=\"load_form\"]/h3")));
-
             for(WebElement label: labels) {
-
                 System.out.println(label.getText());
             }
         }

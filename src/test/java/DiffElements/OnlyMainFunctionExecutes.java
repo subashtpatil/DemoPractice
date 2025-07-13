@@ -6,7 +6,7 @@ public class OnlyMainFunctionExecutes {
         System.out.println("Inside Main");
     }
 
-    public static void testMe(String[] args) {
+    public static void main2(String[] args) {
         System.out.println("Inside testMe");
     }
 

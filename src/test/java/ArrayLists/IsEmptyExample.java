@@ -16,7 +16,6 @@ import java.util.ArrayList;
 
             //Again checking for isEmpty
             System.out.println("Is ArrayList Empty: "+al.isEmpty());
-
             //Displaying elements of the list
             for (Integer num: al) {
                 System.out.println(num);

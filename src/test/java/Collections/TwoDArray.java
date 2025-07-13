@@ -3,10 +3,7 @@ package Collections;
 public class TwoDArray {
 
 	public static void main(String[] args) {
-
-
 		int[][] myArray=new int[2][3];
-		
 		
 		myArray[0][0]=1;
 		myArray[0][1]=2;
@@ -22,7 +19,6 @@ public class TwoDArray {
 		
 		System.out.println(myArray[0].length);*/
 		
-		
 		for(int i=0; i<myArray.length; i++) {
 		
 			for(int j=0;j<myArray[i].length; j++) {
@@ -33,7 +29,5 @@ public class TwoDArray {
 			
 			System.out.println();
 		}
-
 	}
-
 }

@@ -1,6 +1,5 @@
 package DiffElements;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,10 +10,10 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-public class PractiseWindowHandling {
+public class WindowHandling {
     public static void main(String[] args) throws InterruptedException {
 
-        WebDriverManager.chromedriver().setup();
+       // WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.way2automation.com/");
         driver.manage().window().maximize();
@@ -54,6 +53,5 @@ public class PractiseWindowHandling {
         driver.switchTo().window(al.get(2));
         System.out.println(driver.getTitle());
         driver.close();
-
     }
 }

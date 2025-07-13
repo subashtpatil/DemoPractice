@@ -10,10 +10,11 @@ import org.openqa.selenium.interactions.Actions;
 
 import java.time.Duration;
 import java.util.List;
+import org.openqa.selenium.manager.SeleniumManager;
 
 public class HandlingFrames {
     public static void main(String[] args) throws InterruptedException {
-        WebDriverManager.chromedriver().setup();
+        //WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://www.paytm.com");
@@ -40,5 +41,16 @@ List<WebElement> iframes =driver.findElements(By.tagName("iframe"));
 
 
         driver.findElement(By.xpath("//a[@class='_1mvLksqBDbXvIRjc9YWvF x-link'][contains(text(),'privacy policy')]")).click();
+        Thread.sleep(2000);
+
+        //2nd page
+
+        WebElement Element2 = driver.findElement(By.xpath("//span[contains(text(),'Sign In')]"));
+        Element.click();
+        Thread.sleep(2000);
+        driver.switchTo().frame(iframes.get(1));
+
+        driver.findElement(By.xpath("//a[@class='_1mvLksqBDbXvIRjc9YWvF x-link'][contains(text(),'privacy policy')]")).click();
+        Thread.sleep(2000);
     }
 }

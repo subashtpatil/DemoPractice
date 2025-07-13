@@ -13,8 +13,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class TestDragandDrop {
 
 	public static void main(String[] args) {
-
-
 		WebDriverManager.firefoxdriver().setup();
 		WebDriver driver = new FirefoxDriver();
 		driver.get("https://jqueryui.com/resources/demos/droppable/default.html");
@@ -25,10 +23,5 @@ public class TestDragandDrop {
 		WebElement droppable = driver.findElement(By.id("droppable"));
 		Actions action = new Actions(driver);
 		action.dragAndDrop(draggable, droppable).perform();
-		
-		
-	
-
 	}
-
 }

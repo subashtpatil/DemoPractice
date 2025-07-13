@@ -19,7 +19,6 @@ public class ReverseANumber {
             }
             System.out.println("The reversed number by 1st method is  " + rev);
 
-
             // METHOD 2:
              s = new Scanner(System.in);
             System.out.println("Enter the number to be reversed");
@@ -27,10 +26,9 @@ public class ReverseANumber {
 
             // Using StringBuffer class
             StringBuffer sb = new StringBuffer(String.valueOf(num2));
-            StringBuffer rev2 = sb.reverse();
-
-            System.out.println("The reversed number by String Buffer is  " + rev2);
-
+           // StringBuffer   pb = sb.reverse();
+           // System.out.println("The reversed number by String Buffer is  " + pb);
+            System.out.println(sb.reverse());
 
             //METHOD 3 :
              s = new Scanner(System.in);
@@ -42,10 +40,5 @@ public class ReverseANumber {
             StringBuilder rev3= sbl.reverse();
 
             System.out.println("The reversed number by String Builder is  " + rev3);
-
-
         }
-
-
-
     }

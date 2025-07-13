@@ -12,15 +12,16 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.time.Duration;
 import java.util.List;
+import org.openqa.selenium.manager.SeleniumManager;
 
 public class BrokenLinksCount_Name {
     public static void main(String[] args) throws IOException, InterruptedException {
 
-        WebDriverManager.chromedriver().setup();
+        //WebDriverManager.chromedriver().setup();
 
         WebDriver driver = new ChromeDriver();
 
-        driver.get("https://www.google.com");
+        driver.get("https://www.gmail.com");
         driver.manage().window().maximize();
 
 //    Actions a = new Actions(driver);
@@ -35,7 +36,7 @@ public class BrokenLinksCount_Name {
             WebElement element = Links.get(i);
             String strURL = element.getAttribute("href");
 
-            URL url = new URL(strURL);
+            URL url = new URL(strURL);//creating an object of URL
 
             //Create a connection using URL object link
             HttpURLConnection httpConn = (HttpURLConnection) url.openConnection();

@@ -4,8 +4,6 @@ import java.util.Scanner;
 
 /*Each number (every third number) is equal to the sum of the preceding two numbers.
 For example, 0, 1, 1, 2, 3, 5, 8, 13, 21*/
-
-
 public class Fibonacci {
 
         public static void main(String[] args)
@@ -24,9 +22,6 @@ public class Fibonacci {
             }
         }
     }
-
-/*Java Program to Generate Fibonacci Numbers
-This is a Java Program to Generate Fibonacci Numbers.
-The number is said to be in a Fibonacci series if each subsequent
+/*The number is said to be in a Fibonacci series if each subsequent
 number is the sum of the previous two numbers.*/
 

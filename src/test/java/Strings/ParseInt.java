@@ -13,5 +13,4 @@ public class ParseInt{
      int b = Integer.parseInt("456");
     System.out.print(b);
      }
-
 }

@@ -34,8 +34,8 @@ public class SortingUsinArrayList {
 
             /*Unsorted List*/
             System.out.println("Before Sorting:");
-            for(String counter: listofcountries){
-                System.out.println(counter);
+            for(String country: listofcountries){
+                System.out.println(country);
             }
 
             //Kickout Pakistan
@@ -52,8 +52,8 @@ public class SortingUsinArrayList {
 
             /* Sorted List*/
             System.out.println("After Sorting:");
-            for(String country: listofcountries){
-                System.out.println(country);
+            for(String country2: listofcountries){
+                System.out.println(country2);
             }
 
         /*    It is used for removing all the elements of the array list in one go.

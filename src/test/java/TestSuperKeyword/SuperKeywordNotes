@@ -1,0 +1,11 @@
+Super keyword is used to call the parent class constructor with matching arguments.
+ Super keyword should always be written as  the first statement in the child class constructor.
+ Since it is always the first statement, there can be no 2nd Super() keyword in the child class.
+
+ The super keyword refers to superclass (parent) objects. It is used to call superclass methods,
+ and to access the superclass constructor. The most common use of the super keyword
+  is to eliminate the confusion between superclasses and subclasses that have methods
+  with the same name.
+  
+  Now to understand the concept of   Super() keyword. 
+   The Super() keyword is used to call parent class constructor with matching arguments.  

@@ -15,13 +15,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.devtools.v85.memory.Memory;
 //import io.opentelemetry.exporter.logging.SystemOutLogExporter;
+import org.openqa.selenium.manager.SeleniumManager;
 
 public class TestNewTabsAndWindows {
-
-
     public static void main(String[] args) throws InterruptedException {
-
-        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.way2automation.com/");
         driver.manage().window().maximize();
@@ -59,14 +56,8 @@ public class TestNewTabsAndWindows {
         driver.switchTo().window(winIndex.get(1));
         System.out.println("second window title is :" + driver.getTitle());
         driver.close();
-
-
         driver.switchTo().window(winIndex.get(2));
         System.out.println("third window title is :" + driver.getTitle());*/
         driver.quit();
-
-
-
      }
-
 }

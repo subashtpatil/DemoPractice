@@ -20,7 +20,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestElementScreenshot {
-
 	public static WebDriver driver;
 
 	public static void captureScreenshot() throws IOException {
@@ -30,21 +29,15 @@ public class TestElementScreenshot {
 
 		File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(screenshot, new File(".//screenshot//" + fileName));
-
 	}
-
 	public static void captureEleScreenshot(WebElement ele) throws IOException {
 
 		Date d = new Date();
 		String fileName = d.toString().replace(":", "_").replace(" ", "_") + ".jpg";
-
-		
 		File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-
 		BufferedImage fullImg = ImageIO.read(screenshot);
 
 		Point point = ele.getLocation();
-
 		int eleWidth = ele.getSize().getWidth();
 		int eleHeight = ele.getSize().getHeight();
 
@@ -53,11 +46,9 @@ public class TestElementScreenshot {
 
 		File screenshotLocation = new File(".\\screenshot\\"+fileName);
 		FileUtils.copyFile(screenshot, screenshotLocation);
-
 	}
 
 	public static void main(String[] args) throws IOException {
-
 		WebDriverManager.firefoxdriver().setup();
 		driver = new FirefoxDriver();
 		driver.get("http://www.way2automation.com/");
@@ -68,5 +59,4 @@ public class TestElementScreenshot {
 
 		captureScreenshot();
 	}
-
 }

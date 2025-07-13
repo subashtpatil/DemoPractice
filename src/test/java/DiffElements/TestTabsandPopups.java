@@ -14,8 +14,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class TestTabsandPopups {
 
 	public static void main(String[] args) {
-
-		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://hdfcbank.com");
 		driver.manage().window().maximize();
@@ -31,11 +29,6 @@ public class TestTabsandPopups {
 		driver.findElement(By.id("loginsubmit")).click();
 
 		// 2nd window
-
-		/*
-		 * int x =100; x = 200;
-		 */
-
 		System.out.println("----Generating window ids from Second window----");
 
 		winids = driver.getWindowHandles();
@@ -50,7 +43,6 @@ public class TestTabsandPopups {
 		driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/p[3]/a")).click();
 
 		// 3rd window
-
 		System.out.println("----Generating window ids from third window----");
 
 		winids = driver.getWindowHandles();
@@ -73,8 +65,6 @@ public class TestTabsandPopups {
 	/*	driver.close(); //3rd window
 		driver.switchTo().window(second_window);
 		driver.close();*/
-		
 		driver.quit();
 	}
-
 }

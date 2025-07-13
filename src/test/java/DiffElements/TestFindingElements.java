@@ -16,13 +16,11 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class TestFindingElements {
 
 	public static void main(String[] args) {
-
 		WebDriverManager.firefoxdriver().setup();
 		WebDriver driver = new FirefoxDriver();
 		driver.get("http://gmail.com");
 		driver.manage().window().maximize();
 		// driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
 		// WebDriverWait wait = new WebDriverWait(driver, 30);
 
 		Wait<WebDriver> wait = new FluentWait<WebDriver> (driver)
@@ -65,7 +63,5 @@ public class TestFindingElements {
 		System.out.println(wait
 				.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"password\"]/div[2]/div[2]/div")))
 				.getText());
-
 	}
-
 }
